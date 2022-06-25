@@ -93,7 +93,7 @@ img.add_border {
 </style>
 
 </head>
-<body onload="brython()">
+<body>
 <div class='container-fluid'><nav>
         
     <div class="site-wrap">
@@ -156,14 +156,14 @@ from browser import document as doc
 from browser import html
 # 利用 math 函式庫執行三角函數運算
 import math
-canvas = html.CANVAS(width = 600, height = 300)
+canvas = html.CANVAS(width = 600, height = 300,id="canvas")
 #canvas.style = {"width": "100%"}
-canvas.id = "taiwan_flag"
+canvas.id = "brython_div"
 # 將圖畫至 id 為 brython_div 的 cnavas 標註
 brython_div = doc["brython_div"]
 brython_div <= canvas
 # 準備繪圖畫布
-canvas = doc["taiwan_flag"]
+
 ctx = canvas.getContext("2d")
 
 # 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
